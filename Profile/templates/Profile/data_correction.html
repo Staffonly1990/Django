@@ -1,0 +1,14 @@
+{% extends 'Profile/profile.html' %}
+
+
+{% block my_date %}
+
+<form method="post">
+	{% csrf_token %}
+	{% for f in  form%}
+	<p>{{f}}</p>
+	{% endfor %}
+	<button type="submit"> Скорректировать </button>
+</form>
+
+{% endblock %}

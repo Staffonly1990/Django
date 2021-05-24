@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Личный кабинет</title>
+	<!--<link type="text/css" rel="stylesheet" href="{% static 'Users/css/style.css' %}" />-->
+</head>
+
+<body>
+
+<p>Name - {{ user.username }}</p>
+<p>Wallet - {{ user.wallet }}</p>
+<div>
+
+<p><a href="{% url 'my_orders' %}">Мои заказы</a></p>
+<p><a href="{% url 'data_correction' %}">Рдактировать информацию</a></p>
+<p><a href="{% url 'add_order' %}">Добавить заказ</a></p>
+<p><a href="{% url 'logout_user' %}">Выход</a></p>
+</div>
+
+{% block my_orders %}
+{% endblock %}
+
+{% block my_date %}
+{% endblock %}
+
+{% block add_order %}
+{% endblock %}

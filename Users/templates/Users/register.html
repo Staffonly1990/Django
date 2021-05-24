@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+		{% for f in form%}
+		<p>
+			{{f}}<label> {{ f.label }} </label>
+		</p>
+		{{ f.errors }}
+		{{f.}}
+		{% endfor %}
+		<button type="submit"> Регистрация </button>
+	</form>
+</body>
+</html>

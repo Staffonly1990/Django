@@ -1,0 +1,13 @@
+{% extends 'Profile/profile.html' %}
+
+{% block add_order %}
+
+<form method="post">
+	{% csrf_token %}
+	{% for f in form%}
+	<p>{{ f.label }}:{{f}}</p>
+	{% endfor %}
+	<button type="submit"> Добавить </button>
+</form>
+
+{% endblock %}
